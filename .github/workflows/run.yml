@@ -32,7 +32,7 @@ jobs:
         
         python3 main.py <<EOF
         ${sckey}
-        ${user2}
+        ${user}
         ${pwd}
         ${step}
         EOF
