@@ -1,4 +1,4 @@
-name: 刷步数
+name: 刷步数2
 
 on:
   push:
@@ -7,7 +7,9 @@ on:
     branches: [ master ]
   schedule:
     - cron: 0 18 * * *
-
+  watch:
+    types: [ started ]
+  workflow_dispatch:    
 
 jobs:
   build:
@@ -24,13 +26,13 @@ jobs:
       run: |
         pip install requests
         sckey='${{ secrets.SCKEY }}'
-        user='${{ secrets.USER }}'
+        user='${{ secrets.USER2 }}'
         pwd='${{ secrets.PWD }}'
         step='${{ secrets.STEP }}'
         
         python3 main.py <<EOF
         ${sckey}
-        ${user}
+        ${user2}
         ${pwd}
         ${step}
         EOF
