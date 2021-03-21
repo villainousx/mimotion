@@ -151,6 +151,7 @@ if __name__ ==  "__main__":
     # 登录密码
     passwd = input()
     # 要修改的步数，直接输入想要修改的步数值，留空为随机步数
+    print(userid,passwd)
     step = input()
     setp_array = step.split('-')
     if len(setp_array) == 2:
